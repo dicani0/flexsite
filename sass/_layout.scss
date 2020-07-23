@@ -1,0 +1,27 @@
+.container{
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: var(--color-blue-dark);
+    box-shadow: 0 15px 50px rgba(0,0,0,.3);
+    min-height: 500px;
+}
+
+.header{
+    height: 60px;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-red-1);
+}
+
+.content{
+    display: flex;
+}
+
+.sidebar{
+    background-color: var(--color-blue-light);
+    flex: 0 0 20%;
+}
+
+.general{
+    background-color: orangered;
+    flex: 1;
+}
