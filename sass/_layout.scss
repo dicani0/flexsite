@@ -9,16 +9,21 @@
 .header{
     height: 60px;
     background-color: var(--color-blue);
-    border-bottom: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content{
     display: flex;
+    height: 100%;
 }
 
 .sidebar{
     background-color: var(--color-yellow);
     flex: 0 0 20%;
+    height: 100%;
 }
 
 .general{
