@@ -9,7 +9,7 @@
 .header{
     height: 60px;
     background-color: var(--color-blue);
-    border-bottom: 2px solid var(--color-yellow);
+    border-bottom: 2px solid var(--color-gray);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,16 +17,18 @@
 
 .content{
     display: flex;
-    height: 100%;
 }
 
 .sidebar{
     background-color: var(--color-yellow);
     flex: 0 0 20%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .general{
     background-color: orangered;
     flex: 1;
+    height: 1000px;
 }

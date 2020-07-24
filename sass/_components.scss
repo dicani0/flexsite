@@ -91,20 +91,33 @@
     list-style: none;
     font-size: 30px;
     &__item{
-        padding-left: 10px;
+        // padding-left: 15px;
         border-bottom: 1px solid var(--color-gray);
+
         transition: all 0.3s;
         color: var(--color-black);
         &:hover{
             background-color: var(--color-blue);
         }
-
     }
+
+    &__icon{
+        box-sizing: border-box;
+        width: 25px;
+        margin: 0px 10px;
+    }
+
+    &__text{
+        text-align: left;
+        padding-left: 10px;
+    }
+
     &__item:hover &__link{
         color: var(--color-yellow);
     }
-    &__item:hover &__link.fas{
-        color: var(--color-yellow);
+
+    &__item:hover .fas{
+        color: var(--color-yellow) !important;
     }
 
     &__link{
@@ -115,4 +128,9 @@
         color: var(--color-black) !important;
         margin-right: 10px;
     }
+}
+.copy{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
 }
