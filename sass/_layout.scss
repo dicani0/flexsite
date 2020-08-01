@@ -8,9 +8,10 @@
 
 .header{
     height: 60px;
-    background-color: var(--color-blue);
+    background-color: var(--color-black-pure);
     border-bottom: 2px solid var(--color-gray);
     display: flex;
+    color: var(--color-white);
     justify-content: space-between;
     align-items: center;
 }
@@ -21,16 +22,20 @@
 }
 
 .sidebar{
-    background-color: var(--color-yellow);
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
     flex: 0 0 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 1px solid var(--color-gray);
     // height: 500px;
 }
 
 .general{
     background-color: orangered;
     flex: 1;
+    display: flex;
+    flex-direction: column;
     // height: 1000px;
 }
