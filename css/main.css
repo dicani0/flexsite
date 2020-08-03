@@ -4,7 +4,7 @@
   --color-yellow: #E7E247;
   --color-yellow-2: #ff8a00;
   --color-black-pure: #000;
-  --color-black: #3D3B30;
+  --color-black: #383838;
   --color-gray-dark: #292929;
   --color-gray: #4D5061;
   --color-blue: #5C80BC;
@@ -193,7 +193,8 @@ body {
     flex: 0 0 10%;
     justify-content: space-around;
     background-color: var(--color-black-pure);
-    align-items: center; }
+    align-items: center;
+    margin-right: 20px; }
     .overview__icons > .fas {
       color: var(--color-white); }
 
@@ -203,7 +204,7 @@ body {
     box-shadow: none; }
   50% {
     transform: scale(1.1);
-    box-shadow: 0 10px 30px black; }
+    box-shadow: 0 5px 8px rgba(255, 255, 255, 0.4); }
   100% {
     transform: scale(1);
     box-shadow: none; } }
@@ -268,14 +269,54 @@ body {
     .list__item .fas {
       margin-right: 10px; }
 
+.footer {
+  display: flex;
+  background-color: var(--color-black-pure);
+  min-height: 200px;
+  padding: 20px;
+  color: var(--color-white);
+  flex-direction: column; }
+  .footer__main {
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-white); }
+  .footer__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around; }
+    .footer__list__item {
+      cursor: pointer;
+      position: relative;
+      transition: all .2s; }
+      .footer__list__item:not(:last-child) {
+        margin-right: 15px; }
+      .footer__list__item:hover {
+        transform: scale(1.2); }
+    .footer__list__item::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      visibility: hidden;
+      right: 0;
+      height: 1px;
+      width: 10%;
+      background-color: var(--color-white);
+      z-index: 1000;
+      transition: all .4s; }
+    .footer__list__item:hover::before {
+      visibility: visible;
+      transform: scaleX(15); }
+
 .container {
   max-width: 1200px;
   margin: 50px auto;
   background-color: var(--color-black);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 4px 4px var(--color-gray); }
 
 .header {
-  height: 60px;
+  height: 80px;
   background-color: var(--color-black-pure);
   border-bottom: 2px solid var(--color-gray);
   display: flex;

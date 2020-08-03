@@ -2,12 +2,12 @@
     max-width: 1200px;
     margin: 50px auto;
     background-color: var(--color-black);
-    box-shadow: 0 15px 50px rgba(0,0,0,.3);
+    box-shadow: 0 4px 4px var(--color-gray);
     
 }
 
 .header{
-    height: 60px;
+    height: 80px;
     background-color: var(--color-black-pure);
     border-bottom: 2px solid var(--color-gray);
     display: flex;
