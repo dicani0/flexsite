@@ -1,24 +1,38 @@
 .container{
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 20px auto;
     background-color: var(--color-black);
     box-shadow: 0 4px 4px var(--color-gray);
+
+    @media only screen and (max-width: 1200px){
+        margin: 0;
+    }
+    @media only screen and (max-width: 768px){
+        max-width: 100%;
+    }
     
 }
 
 .header{
-    height: 80px;
+    min-height: 80px;
     background-color: var(--color-black-pure);
     border-bottom: 2px solid var(--color-gray);
     display: flex;
     color: var(--color-white);
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 380px){
+        flex-direction: column;
+    }
 }
 
 .content{
     display: flex;
     min-height: 500px;
+    @media only screen and (max-width: 900px){
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .sidebar{

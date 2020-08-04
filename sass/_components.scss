@@ -2,6 +2,9 @@
     height: 55px;
     width: 55px;
     margin-left: 35px;
+    @media only screen and (max-width: 380px){
+        margin-left: 0;
+    }
 }
 
 .search{
@@ -9,6 +12,9 @@
     align-items: center;
     justify-content: center;
     flex: 0 0 40%;
+    @media only screen and (max-width: 380px){
+        margin-bottom: 15px;
+    }
     &__input{
         font-family: inherit;
         font-size: inherit;
@@ -47,13 +53,17 @@
     align-items: center;
     justify-content: space-around;
     align-self: stretch;
-
+    @media only screen and (max-width: 380px){
+        justify-content: space-around;
+    }
     & > *{
         padding: 0 15px;
         cursor: pointer;
-        height: 46px;
+        // min-height: 46px;
     }
-
+    &__icons{
+        display: flex;
+    }
     &__icon-box{
         display: flex;
         align-items: center;
@@ -63,9 +73,16 @@
         background-color: var(--color-gray);
         color: var(--color-black-pure);
         width: 46px;
+        height: 46px;
         margin-right: 5px;
         transition: all 0.3s;
         outline: none;
+
+        @media only screen and (max-width: 480px){
+            font-size: 12px;
+            width: 30px;
+            height: 30px;
+        }
 
         &:hover{
             background-color: var(--color-black);
@@ -80,10 +97,18 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        @media only screen and (max-width: 480px){
+            flex-direction: column;
+        }
         &-photo{
             height: 35px;
             border-radius: 50%;
             margin-right: 5px;
+
+            @media only screen and (max-width: 480px){
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }
@@ -91,6 +116,9 @@
     list-style: none;
     font-size: 30px;
     color: var(--color-white);
+    @media only screen and (max-width: 1024px){
+        font-size: 25px;
+    }
     &__item{
         // padding-left: 15px;
         border-bottom: 1px solid var(--color-gray);
@@ -102,6 +130,7 @@
         width: 25px;
         margin: 0px 10px;
         color: inherit;
+
     }
 
     &__link{
@@ -185,6 +214,13 @@
       flex: 1;
       text-align: center;
       padding: 10px 0;
+      @media only screen and (max-width: 1024px){
+          font-size: 25px;
+      }
+      @media only screen and (max-width: 680px){
+          font-size: 18px;
+          padding: 10px;
+      }
     }
     &__link{
         flex: 0 0 20%;
@@ -202,6 +238,10 @@
             color: var(--color-white);
             border-bottom: 1px solid currentColor;
             transition: all .2s;
+            
+            @media only screen and (max-width: 680px){
+                font-size: 12px;
+            }
 
             &:hover{
                 color: #fff;
@@ -220,7 +260,9 @@
         background-color: var(--color-black-pure);
         align-items: center;
         margin-right: 20px;
-
+        @media only screen and (max-width: 680px){
+            display: none;
+        }
         & > .fas{
             color: var(--color-white);
         }
@@ -233,7 +275,7 @@
     }
     50%{
         transform: scale(1.1);
-        box-shadow: 0 5px 8px rgba($color: #fff, $alpha: 0.4);
+        // text-shadow: 0 5px 8px rgba($color: #fff, $alpha: 0.4);
     }
     100%{
         transform: scale(1);
@@ -252,22 +294,47 @@
     display: flex;
     padding: 25px;
     font-size: 14px;
+
+    @media only screen and (max-width: 680px){
+        font-size: 10px;
+        flex-direction: column;
+    }
+    @media only screen and (max-width: 900px){
+        padding: 0;
+    }
+
     &--main{
         background-color: rgba(155, 155, 155, 0.438);
-        flex: 0 0 65%;
+        flex: 0 1 65%;
         margin-right: 25px;
+        font-size: inherit;
         // box-shadow: 0 5px 70px white;
         padding: 20px;
         border-radius: 30px;
         border: 1px solid var(--color-white);
+        @media only screen and (max-width: 900px){
+            margin-bottom: 20px;
+            margin-right: 0;
+            padding: 10px 15px;
+            border-radius: 0;
+            border: none;
+        }
     }
     &--side{
         background-color: rgba(155, 155, 155, 0.438);
         flex: 1;
         padding: 20px;
-        font-size: 14px;
+        font-size: inherit;
         border-radius: 30px;
         border: 1px solid var(--color-white);
+        @media only screen and (max-width: 900px){
+            margin-bottom: 20px;
+            margin-right: 0;
+            padding: 10px 15px;
+            border-radius: 0;
+            border: none;
+            text-align: center;
+        }
     }
     &__box{
         border-bottom: 2px solid black;
@@ -278,11 +345,26 @@
         }
         &__user{
             display: flex;
+            @media only screen and (max-width: 680px){
+                font-size: 10px;
+                flex-direction: column;
+                flex: 1;
+            }
+            @media only screen and (max-width: 900px){
+                text-align: center;
+            }
         }
         &__name{
             font-size: 18px;
             font-weight: 600;
             margin-right: auto;
+            @media only screen and(max-width: 680px){
+                font-size: 12px;
+            }
+            @media only screen and (max-width: 900px){
+                text-align: center;
+                margin-right: 0;
+            }
         }
         &__date{
 
@@ -369,3 +451,56 @@
         }
     }
 }
+.cta{
+    margin-top: 50px;
+    text-align: center;
+}
+.cta-btn{
+    border: 1px solid var(--color-white);
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 15px;
+    outline: none;
+    color: var(--color-white);
+    background-image: linear-gradient(to left, var(--color-black-pure), var(--color-gray));
+    position: relative;
+    display: inline-block;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    transition: all .4s;
+    overflow: hidden;
+    &--visible{
+        display: inline-block;
+        padding: 10px;
+        transition: all .2s;
+        transform: translateY(0%);
+    }
+
+    &--invisible{
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: -100%;
+        visibility: hidden;
+        transition: all .2s;
+    }
+    &:hover{
+        background-position-x: 100%;
+    }
+    &:hover &--visible{
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+
+    &:hover &--invisible{
+        visibility: visible;
+        top: 0%;
+    }
+}
+
+
+

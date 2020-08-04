@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
             <img src="img/logo.png" alt="logo" class="logo">
             <form action="#" class="search">
 
-                <input type="text" class="search__input">
+                <input type="text" aria-label="search" class="search__input">
 
                 <a class="search__button" href="#"><i class="fas fa-search"></i></a>
                 <!-- <button class="search__button">
@@ -22,13 +23,15 @@
                 </button> -->
             </form>
             <nav class="user-nav">
-                <div class="user-nav__icon-box">
-                    <i class="fas fa-calendar"></i>
+                <div class="user-nav__icons">
+                    <div class="user-nav__icon-box">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <i class="fas fa-bell"></i>
+                    </div>
                 </div>
-                <div class="user-nav__icon-box">
-                    <i class="fas fa-bell"></i>
 
-                </div>
                 <div class="user-nav__profile">
                     <img src="img/profilephoto.jpg" alt="" class="user-nav__profile-photo">
                     <span class="user-nav__profile-name">Dawid</span>
@@ -119,6 +122,17 @@
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia, eius impedit aliquid velit dolore inventore.
                         </p>
+                        <div class="cta">
+                            <button class="cta-btn">
+                                <span class="cta-btn--visible">
+                                    Nostrum
+                                </span>
+                                <span class="cta-btn--invisible">
+                                    Labore
+                                </span>
+                            </button>
+                        </div>
+                        
                     </div>
                     <div class="details--side">
                         <div class="details__box">
@@ -157,10 +171,10 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum maxime praesentium nulla magnam eaque a accusamus atque sint ea eligendi natus ut sapiente tenetur saepe, laudantium voluptatem vero aut.</div>
             <ul class="footer__list">
                 <li class="footer__list__item">Lorem</li>
-                <li class="footer__list__item">Lorem</li>
-                <li class="footer__list__item">Lorem</li>
-                <li class="footer__list__item">Lorem</li>
-                <li class="footer__list__item">Lorem</li>
+                <li class="footer__list__item">Ipsum</li>
+                <li class="footer__list__item">Dolor</li>
+                <li class="footer__list__item">Sit</li>
+                <li class="footer__list__item">Amet</li>
             </ul>
         </div>
     </div>
